@@ -1,5 +1,5 @@
 # GraphQL
- De rest Api a GraphQL...
+ De rest Api a GraphQL... (Vamos a usar HotChocolate)
 
 **Comandos para la migracion (hay que cambiar el connection string del app settings):** 
 - cd api3 // Caperta del .Csproj
