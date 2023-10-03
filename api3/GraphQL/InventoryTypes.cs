@@ -1,6 +1,7 @@
 ﻿using api3.Models;
 using HotChocolate;
 using HotChocolate.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace api3.GraphQL
 {
@@ -80,15 +81,64 @@ public class Query
 
 
     }
-    /*
+
     public class Mutation
     {
-       public Inventory AddInventory([Service] PgAdminContext dbContext, InventoryInput input)
+        public Inventory AddInventory([Service] PgAdminContext dbContext, InventoryInput input)
         {
-            // Implementa lógica para agregar un registro de inventario a la base de datos
-            // Utiliza el parámetro de entrada para crear un objeto Inventory y guardarlo en la base de datos
+            var lastInventory = dbContext.Inventories
+    .OrderByDescending(e => e.IdInventory)
+    .FirstOrDefault();
+
+            int id = 0;
+
+            if (lastInventory != null)
+            {
+                // Se encontró el último registro, devuelve el siguiente ID.
+                id = Convert.ToInt32(lastInventory.IdInventory + 1);
+                
+            }
+            else
+            {
+                id = 1;
+                // No se encontraron registros en la tabla, devuelve 1 como el primer ID.
+
+            }
+
+
+            string employeeName = input.Employee.Name;
+            int idEmployee = dbContext.Employees
+     .Where(employee => employee.Name == employeeName)
+     .Select(employee => employee.IdEmployee)
+     .FirstOrDefault();
+
+            string shopName = input.Shop.Name;
+            int idStore = dbContext.Stores
+    .Where(store => store.Name == shopName)
+    .Select(store => store.IdStore)
+    .FirstOrDefault();
+
+            // Crea una nueva instancia de Inventory a partir de los datos proporcionados en input
+            var newInventory = new Inventory
+            {
+                IdInventory = id,
+                IdEmployee = idEmployee,
+                IdStore = idStore,
+                Flavor = input.Icecream.Flavor,
+                Quantity = input.Icecream.Count,
+                IsSeasonFlavor = Convert.ToString(input.Icecream.IsSeasonFlavor),
+                Date = DateTime.UtcNow // Utiliza la fecha y hora actual en formato UTC
+            };
+
+            // Agrega el nuevo inventario a la base de datos
+            dbContext.Inventories.Add(newInventory);
+            dbContext.SaveChanges();
+
+            // Devuelve el inventario recién creado
+            return newInventory;
         }
-    }*/
+    }
+
 
 
 
