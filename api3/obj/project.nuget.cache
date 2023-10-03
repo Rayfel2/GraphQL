@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YkEdZG4/lTFhSNbnvmZVAHPOkhV5b8CHRBZD5AsIBYYfyGt3x9VkOqDx+JpxOypG+opBDFrCE0o4ajhm2su5gA==",
+  "dgSpecHash": "ZEtWAC2X6MqIuMqHHmyiQWzuRrF8yEwT5Xo+HIDfHF9ldy1UCBjvwmIF/2TfMVvCLc8XdYdMxEtkCWbNb9+jAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rayfe\\OneDrive\\Documents\\GitHub\\GraphQL\\api3\\api3.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.abstractions\\13.5.1\\hotchocolate.abstractions.13.5.1.nupkg.sha512",
     "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.aspnetcore\\13.5.1\\hotchocolate.aspnetcore.13.5.1.nupkg.sha512",
     "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.authorization\\13.5.1\\hotchocolate.authorization.13.5.1.nupkg.sha512",
+    "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.data\\13.5.1\\hotchocolate.data.13.5.1.nupkg.sha512",
+    "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.data.entityframework\\13.5.1\\hotchocolate.data.entityframework.13.5.1.nupkg.sha512",
     "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.execution\\13.5.1\\hotchocolate.execution.13.5.1.nupkg.sha512",
     "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.execution.abstractions\\13.5.1\\hotchocolate.execution.abstractions.13.5.1.nupkg.sha512",
     "C:\\Users\\rayfe\\.nuget\\packages\\hotchocolate.fetching\\13.5.1\\hotchocolate.fetching.13.5.1.nupkg.sha512",
