@@ -26,3 +26,4 @@ public partial class Inventory
 
     public virtual Store? IdStoreNavigation { get; set; }
 }
+

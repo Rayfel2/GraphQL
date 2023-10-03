@@ -57,6 +57,30 @@
               "target": "Package",
               "version": "[30.0.1, )"
             },
+            "HotChocolate": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.Subscriptions": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.Types.Filters": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.Types.Selections": {
+              "target": "Package",
+              "version": "[10.5.5, )"
+            },
+            "HotChocolate.Types.Sorting": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.11, )"
