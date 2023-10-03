@@ -1,19 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QVTCBU5V5BivzJAIC8Zau/Jyv+ZlwpCO1QpbMOzs5Q9wvuZVHFcpzMq4CwUi4/FGdbvjLSY5pqX4ZiHizEX71w==",
+  "dgSpecHash": "4rS4bLzOttA5VFH8woF3WxGfYlYUx8CDEoUEiLRZNLNnqJJM/hcVPfFGnxRZX1DeF5OVEn5Hw0qi5/n5GistKQ==",
   "success": true,
-  "projectFilePath": "F:\\Programacion\\apiGraphQl\\api3\\api3.csproj",
+  "projectFilePath": "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\api3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Avis\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Avis\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Avis\\.nuget\\packages\\bananacakepop.middleware\\7.0.4\\bananacakepop.middleware.7.0.4.nupkg.sha512",
     "C:\\Users\\Avis\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
-    "C:\\Users\\Avis\\.nuget\\packages\\fparsec\\1.0.2\\fparsec.1.0.2.nupkg.sha512",
-    "C:\\Users\\Avis\\.nuget\\packages\\fparsec-pipes\\0.3.1\\fparsec-pipes.0.3.1.nupkg.sha512",
-    "C:\\Users\\Avis\\.nuget\\packages\\fsharp.core\\4.0.0.1\\fsharp.core.4.0.0.1.nupkg.sha512",
-    "C:\\Users\\Avis\\.nuget\\packages\\graphql\\7.6.1\\graphql.7.6.1.nupkg.sha512",
-    "C:\\Users\\Avis\\.nuget\\packages\\graphql-parser\\8.4.0\\graphql-parser.8.4.0.nupkg.sha512",
-    "C:\\Users\\Avis\\.nuget\\packages\\graphql.net\\0.3.5\\graphql.net.0.3.5.nupkg.sha512",
     "C:\\Users\\Avis\\.nuget\\packages\\greendonut\\13.5.1\\greendonut.13.5.1.nupkg.sha512",
     "C:\\Users\\Avis\\.nuget\\packages\\hotchocolate\\13.5.1\\hotchocolate.13.5.1.nupkg.sha512",
     "C:\\Users\\Avis\\.nuget\\packages\\hotchocolate.abstractions\\13.5.1\\hotchocolate.abstractions.13.5.1.nupkg.sha512",
@@ -83,46 +77,5 @@
     "C:\\Users\\Avis\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Avis\\.nuget\\packages\\yarp.reverseproxy\\2.0.1\\yarp.reverseproxy.2.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"FParsec 1.0.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "FParsec",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"FParsec-Pipes 0.3.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "FParsec-Pipes",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"FSharp.Core 4.0.0.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "FSharp.Core",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"GraphQL.Net 0.3.5\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "GraphQL.Net",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

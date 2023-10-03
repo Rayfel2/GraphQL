@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Programacion\\apiGraphQl\\api3\\api3.csproj": {}
+    "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\api3.csproj": {}
   },
   "projects": {
-    "F:\\Programacion\\apiGraphQl\\api3\\api3.csproj": {
+    "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\api3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Programacion\\apiGraphQl\\api3\\api3.csproj",
+        "projectUniqueName": "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\api3.csproj",
         "projectName": "api3",
-        "projectPath": "F:\\Programacion\\apiGraphQl\\api3\\api3.csproj",
+        "projectPath": "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\api3.csproj",
         "packagesPath": "C:\\Users\\Avis\\.nuget\\packages\\",
-        "outputPath": "F:\\Programacion\\apiGraphQl\\api3\\obj\\",
+        "outputPath": "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,14 +56,6 @@
             "CsvHelper": {
               "target": "Package",
               "version": "[30.0.1, )"
-            },
-            "GraphQL": {
-              "target": "Package",
-              "version": "[7.6.1, )"
-            },
-            "GraphQL.Net": {
-              "target": "Package",
-              "version": "[0.3.5, )"
             },
             "HotChocolate.AspNetCore": {
               "target": "Package",

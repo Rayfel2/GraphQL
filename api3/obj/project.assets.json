@@ -59,99 +59,6 @@
           }
         }
       },
-      "FParsec/1.0.2": {
-        "type": "package",
-        "compile": {
-          "lib/net40-client/FParsec.dll": {
-            "related": ".XML"
-          },
-          "lib/net40-client/FParsecCS.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net40-client/FParsec.dll": {
-            "related": ".XML"
-          },
-          "lib/net40-client/FParsecCS.dll": {
-            "related": ".XML"
-          }
-        }
-      },
-      "FParsec-Pipes/0.3.1": {
-        "type": "package",
-        "dependencies": {
-          "FParsec": "1.0.2"
-        },
-        "compile": {
-          "lib/net45/FParsec-Pipes.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/FParsec-Pipes.dll": {
-            "related": ".XML"
-          }
-        }
-      },
-      "FSharp.Core/4.0.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net40/FSharp.Core.dll": {
-            "related": ".optdata;.sigdata;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net40/FSharp.Core.dll": {
-            "related": ".optdata;.sigdata;.xml"
-          }
-        }
-      },
-      "GraphQL/7.6.1": {
-        "type": "package",
-        "dependencies": {
-          "GraphQL-Parser": "8.4.0"
-        },
-        "compile": {
-          "lib/net6.0/GraphQL.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/GraphQL.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "GraphQL-Parser/8.4.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/GraphQLParser.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/GraphQLParser.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "GraphQL.Net/0.3.5": {
-        "type": "package",
-        "dependencies": {
-          "FParsec": "1.0.2",
-          "FParsec-Pipes": "0.3.1",
-          "FSharp.Core": "4.0.0.1"
-        },
-        "compile": {
-          "lib/net40/GraphQL.Net.dll": {},
-          "lib/net40/GraphQL.Parser.dll": {}
-        },
-        "runtime": {
-          "lib/net40/GraphQL.Net.dll": {},
-          "lib/net40/GraphQL.Parser.dll": {}
-        }
-      },
       "GreenDonut/13.5.1": {
         "type": "package",
         "dependencies": {
@@ -1324,131 +1231,6 @@
         "lib/netstandard2.0/CsvHelper.xml",
         "lib/netstandard2.1/CsvHelper.dll",
         "lib/netstandard2.1/CsvHelper.xml"
-      ]
-    },
-    "FParsec/1.0.2": {
-      "sha512": "QT3Y3+UsfUhoXdbrL+n1IdRbhmTWMpAucMKi3GTMMmwzjp0fgOXY/GGzVM2j37mw+N0G9HS9zEnSn6wF6KzRMQ==",
-      "type": "package",
-      "path": "fparsec/1.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fparsec.1.0.2.nupkg.sha512",
-        "fparsec.nuspec",
-        "lib/net40-client/FParsec.XML",
-        "lib/net40-client/FParsec.dll",
-        "lib/net40-client/FParsecCS.XML",
-        "lib/net40-client/FParsecCS.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8/FParsec.XML",
-        "lib/portable-net45+netcore45+wpa81+wp8/FParsec.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8/FParsecCS.XML",
-        "lib/portable-net45+netcore45+wpa81+wp8/FParsecCS.dll"
-      ]
-    },
-    "FParsec-Pipes/0.3.1": {
-      "sha512": "N6nQpgU6HKwxK05WJnCpKM2GA4hg4AYGSYK6sOTPOWiJUqNvY/0n0A5TKLL15Y962t8bgf0L5r5AZZ/E34C/ng==",
-      "type": "package",
-      "path": "fparsec-pipes/0.3.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fparsec-pipes.0.3.1.nupkg.sha512",
-        "fparsec-pipes.nuspec",
-        "lib/net45/FParsec-Pipes.XML",
-        "lib/net45/FParsec-Pipes.dll"
-      ]
-    },
-    "FSharp.Core/4.0.0.1": {
-      "sha512": "lNtlbbJ5hP8LEd7nKtTUiGEpLmHLWiU39x+0jq4rmRWG7Mgj6vYm+gmTOhtwpiPFX8j8zUsfLyA8AC7dZY75LQ==",
-      "type": "package",
-      "path": "fsharp.core/4.0.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fsharp.core.4.0.0.1.nupkg.sha512",
-        "fsharp.core.nuspec",
-        "lib/net20/FSharp.Core.dll",
-        "lib/net20/FSharp.Core.optdata",
-        "lib/net20/FSharp.Core.sigdata",
-        "lib/net20/FSharp.Core.xml",
-        "lib/net40/FSharp.Core.dll",
-        "lib/net40/FSharp.Core.optdata",
-        "lib/net40/FSharp.Core.sigdata",
-        "lib/net40/FSharp.Core.xml",
-        "lib/portable-net45+monoandroid10+monotouch10+xamarinios10/FSharp.Core.dll",
-        "lib/portable-net45+monoandroid10+monotouch10+xamarinios10/FSharp.Core.optdata",
-        "lib/portable-net45+monoandroid10+monotouch10+xamarinios10/FSharp.Core.sigdata",
-        "lib/portable-net45+monoandroid10+monotouch10+xamarinios10/FSharp.Core.xml",
-        "lib/portable-net45+netcore45+wp8/FSharp.Core.dll",
-        "lib/portable-net45+netcore45+wp8/FSharp.Core.optdata",
-        "lib/portable-net45+netcore45+wp8/FSharp.Core.sigdata",
-        "lib/portable-net45+netcore45+wp8/FSharp.Core.xml",
-        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Core.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Core.optdata",
-        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Core.sigdata",
-        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Core.xml",
-        "lib/portable-net45+netcore45/FSharp.Core.dll",
-        "lib/portable-net45+netcore45/FSharp.Core.optdata",
-        "lib/portable-net45+netcore45/FSharp.Core.sigdata",
-        "lib/portable-net45+netcore45/FSharp.Core.xml",
-        "lib/portable-net45+sl5+netcore45/FSharp.Core.dll",
-        "lib/portable-net45+sl5+netcore45/FSharp.Core.optdata",
-        "lib/portable-net45+sl5+netcore45/FSharp.Core.sigdata",
-        "lib/portable-net45+sl5+netcore45/FSharp.Core.xml"
-      ]
-    },
-    "GraphQL/7.6.1": {
-      "sha512": "16UOuR01WG0APHArtNkenSsOivRxZ3Ikdf4zG4GLlvnYuB9g/1MGI2HlZJ3ufa8rVUpdSS/WGpI9ifi779OBjQ==",
-      "type": "package",
-      "path": "graphql/7.6.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "README.md",
-        "graphql.7.6.1.nupkg.sha512",
-        "graphql.nuspec",
-        "lib/net5.0/GraphQL.dll",
-        "lib/net5.0/GraphQL.xml",
-        "lib/net6.0/GraphQL.dll",
-        "lib/net6.0/GraphQL.xml",
-        "lib/netstandard2.0/GraphQL.dll",
-        "lib/netstandard2.0/GraphQL.xml",
-        "lib/netstandard2.1/GraphQL.dll",
-        "lib/netstandard2.1/GraphQL.xml",
-        "logo.64x64.png"
-      ]
-    },
-    "GraphQL-Parser/8.4.0": {
-      "sha512": "FwDgsaOPEoa7sAACRl9wjQl+J8Z0x9C8HcBWRCzRVRvrvBZsBLX8fnL+6pDnUhn0audU05Cjod4uqJe4cB9OFw==",
-      "type": "package",
-      "path": "graphql-parser/8.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "graphql-parser.8.4.0.nupkg.sha512",
-        "graphql-parser.nuspec",
-        "lib/net6.0/GraphQLParser.dll",
-        "lib/net6.0/GraphQLParser.xml",
-        "lib/netstandard2.0/GraphQLParser.dll",
-        "lib/netstandard2.0/GraphQLParser.xml",
-        "lib/netstandard2.1/GraphQLParser.dll",
-        "lib/netstandard2.1/GraphQLParser.xml",
-        "logo.64x64.png"
-      ]
-    },
-    "GraphQL.Net/0.3.5": {
-      "sha512": "6Yfg8fse1hDQd9MlUdUiLioGhvOyhLpvtEXKhWNtvjyKoJulOxPX0JEWqEPVYsfPh/opX3QuhDLyyravk58zGA==",
-      "type": "package",
-      "path": "graphql.net/0.3.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "graphql.net.0.3.5.nupkg.sha512",
-        "graphql.net.nuspec",
-        "lib/net40/GraphQL.Net.dll",
-        "lib/net40/GraphQL.Parser.dll"
       ]
     },
     "GreenDonut/13.5.1": {
@@ -3254,8 +3036,6 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "CsvHelper >= 30.0.1",
-      "GraphQL >= 7.6.1",
-      "GraphQL.Net >= 0.3.5",
       "HotChocolate.AspNetCore >= 13.5.1",
       "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.11",
@@ -3272,11 +3052,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Programacion\\apiGraphQl\\api3\\api3.csproj",
+      "projectUniqueName": "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\api3.csproj",
       "projectName": "api3",
-      "projectPath": "F:\\Programacion\\apiGraphQl\\api3\\api3.csproj",
+      "projectPath": "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\api3.csproj",
       "packagesPath": "C:\\Users\\Avis\\.nuget\\packages\\",
-      "outputPath": "F:\\Programacion\\apiGraphQl\\api3\\obj\\",
+      "outputPath": "F:\\Programacion\\apiGraphQl\\GraphQL\\api3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3321,14 +3101,6 @@
           "CsvHelper": {
             "target": "Package",
             "version": "[30.0.1, )"
-          },
-          "GraphQL": {
-            "target": "Package",
-            "version": "[7.6.1, )"
-          },
-          "GraphQL.Net": {
-            "target": "Package",
-            "version": "[0.3.5, )"
           },
           "HotChocolate.AspNetCore": {
             "target": "Package",
@@ -3383,47 +3155,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"FParsec 1.0.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "FParsec",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"FParsec-Pipes 0.3.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "FParsec-Pipes",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"FSharp.Core 4.0.0.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "FSharp.Core",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"GraphQL.Net 0.3.5\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "GraphQL.Net",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
