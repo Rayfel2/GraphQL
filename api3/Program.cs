@@ -27,11 +27,9 @@ builder.Services.AddGraphQLServer()
     .AddProjections()
     .AddSorting()
     .AddFiltering()
-   .AddType<InventoryType>()
-   .AddInputObjectType<InventoryInput>()
+    .AddType<IcecreamType>()
+   .AddInputObjectType<InventoryInput>() // Ya este trae consigo los otros inputs
     .AddMutationType<Mutation>()
-    //  .AddType<ShopType>()
-    //.AddType<EmployeeType>()
     ;
 
 builder.Services.AddControllers();

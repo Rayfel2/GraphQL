@@ -1,11 +1,9 @@
 ﻿using api3.Models;
-using HotChocolate;
-using HotChocolate.Data;
-using Microsoft.EntityFrameworkCore;
+using GreenDonut;
 
 namespace api3.GraphQL
 {
-    
+
     public class InventoryInput
     {
         public ShopInput Shop { get; set; }
@@ -30,50 +28,64 @@ namespace api3.GraphQL
     {
         public string Name { get; set; }
     }
-    
 
-    public class InventoryType : ObjectType<Inventory>
-{
-    protected override void Configure(IObjectTypeDescriptor<Inventory> descriptor)
+
+
+    public class IcecreamType : ObjectType<Inventory>
     {
-        descriptor.Field(i => i.IdInventory).Type<IdType>();
-        descriptor.Field(i => i.IdStore).Type<IdType>();
-        descriptor.Field(i => i.IdEmployee).Type<IdType>();
-        descriptor.Field(i => i.Date).Type<DateTimeType>();
-        descriptor.Field(i => i.Flavor).Type<StringType>();
-        descriptor.Field(i => i.IsSeasonFlavor).Type<BooleanType>();
-        descriptor.Field(i => i.Quantity).Type<IntType>();
+        protected override void Configure(IObjectTypeDescriptor<Inventory> descriptor)
+        {
+            descriptor.Field(i => i.Flavor).Type<StringType>();
+            descriptor.Field(i => i.Quantity).Type<IntType>().Name("count");
+            descriptor.Field(i => i.IsSeasonFlavor).Type<BooleanType>()
+                .Resolver(context =>
+                {
+                    var isSeasonFlavor = context.Parent<Inventory>().IsSeasonFlavor;
+                    if (isSeasonFlavor is bool)
+                    {
+                        return isSeasonFlavor;
+                    }
+                    else if (isSeasonFlavor is string)
+                    {
+                        return ((string)isSeasonFlavor).Equals("Yes", StringComparison.OrdinalIgnoreCase);
+                    }
+                    else
+                    {
+                        return false; // Valor predeterminado si no es booleano ni una cadena "Yes"
+                    }
+                });
+        }
     }
-}
 
 
 
-public class Query
-{
-    [UseProjection]
-    [HotChocolate.Data.UseFiltering]
-    [HotChocolate.Data.UseSorting]
-    public IQueryable<Inventory> GetInventory([Service] PgAdminContext dbContext) =>
-        dbContext.Inventories;
-    
-    public IQueryable<Inventory> InventoryByFlavor([Service] PgAdminContext dbContext, string flavor) =>
-        dbContext.Inventories.Where(i => i.Flavor == flavor);
 
-    public IQueryable<Inventory> InventoryByShop([Service] PgAdminContext dbContext, string shop) =>
-        dbContext.Inventories.Where(i => i.IdStoreNavigation.Name == shop);
+    public class Query
+    {
+        [UseProjection]
+        [HotChocolate.Data.UseFiltering]
+        [HotChocolate.Data.UseSorting]
+        public IQueryable<Inventory> GetInventory([Service] PgAdminContext dbContext) =>
+            dbContext.Inventories;
+
+        public IQueryable<Inventory> InventoryByFlavor([Service] PgAdminContext dbContext, string flavor) =>
+            dbContext.Inventories.Where(i => i.Flavor == flavor);
+
+        public IQueryable<Inventory> InventoryByShop([Service] PgAdminContext dbContext, string shop) =>
+            dbContext.Inventories.Where(i => i.IdStoreNavigation.Name == shop);
 
         public IQueryable<Inventory> InventoryByDate([Service] PgAdminContext dbContext, string date)
         {
             if (DateTime.TryParse(date, out DateTime parsedDate))
             {
-                // Asegurarse de que la fecha sea en formato UTC
+                //formato UTC
                 parsedDate = DateTime.SpecifyKind(parsedDate, DateTimeKind.Utc);
 
                 return dbContext.Inventories.Where(i => i.Date == parsedDate.Date);
             }
             else
             {
-                // Manejo de error si la conversión de fecha falla
+                // Solo por ciaca
                 return Enumerable.Empty<Inventory>().AsQueryable();
             }
         }
@@ -86,6 +98,7 @@ public class Query
     {
         public Inventory AddInventory([Service] PgAdminContext dbContext, InventoryInput input)
         {
+            // (porque no tengo identity)
             var lastInventory = dbContext.Inventories
     .OrderByDescending(e => e.IdInventory)
     .FirstOrDefault();
@@ -94,15 +107,11 @@ public class Query
 
             if (lastInventory != null)
             {
-                // Se encontró el último registro, devuelve el siguiente ID.
                 id = Convert.ToInt32(lastInventory.IdInventory + 1);
-                
             }
             else
             {
                 id = 1;
-                // No se encontraron registros en la tabla, devuelve 1 como el primer ID.
-
             }
 
 
@@ -118,6 +127,17 @@ public class Query
     .Select(store => store.IdStore)
     .FirstOrDefault();
 
+
+            string is_season_flavor;
+            if (input.Icecream.IsSeasonFlavor)
+            {
+                is_season_flavor = "Yes";
+            }
+            else
+            {
+                is_season_flavor = "No";
+            }
+
             // Crea una nueva instancia de Inventory a partir de los datos proporcionados en input
             var newInventory = new Inventory
             {
@@ -126,7 +146,7 @@ public class Query
                 IdStore = idStore,
                 Flavor = input.Icecream.Flavor,
                 Quantity = input.Icecream.Count,
-                IsSeasonFlavor = Convert.ToString(input.Icecream.IsSeasonFlavor),
+                IsSeasonFlavor = is_season_flavor,
                 Date = DateTime.UtcNow // Utiliza la fecha y hora actual en formato UTC
             };
 
@@ -138,8 +158,4 @@ public class Query
             return newInventory;
         }
     }
-
-
-
-
 }
