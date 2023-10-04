@@ -29,6 +29,22 @@ namespace api3.GraphQL
         public string Name { get; set; }
     }
 
+    /* Al final le puse iceCream
+     
+        public class InventoryType : ObjectType<Inventory>
+    {
+        protected override void Configure(IObjectTypeDescriptor<Inventory> descriptor)
+        {
+            descriptor.Field(i => i.IdInventory).Type<IdType>();
+            descriptor.Field(i => i.IdStore).Type<IdType>();
+            descriptor.Field(i => i.IdEmployee).Type<IdType>();
+            descriptor.Field(i => i.Date).Type<DateTimeType>();
+            descriptor.Field(i => i.Flavor).Type<StringType>();
+            descriptor.Field(i => i.IsSeasonFlavor).Type<BooleanType>();
+            descriptor.Field(i => i.Quantity).Type<IntType>();
+        }
+    }*/
+
 
 
     public class IcecreamType : ObjectType<Inventory>
@@ -51,7 +67,8 @@ namespace api3.GraphQL
                     }
                     else
                     {
-                        return false; // Valor predeterminado si no es booleano ni una cadena "Yes"
+                        return false;
+                    
                     }
                 });
         }
